@@ -1,4 +1,4 @@
-function $(selector): {}{
+function $(selector){
     return {
         element: document.querySelector(selector),
         
