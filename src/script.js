@@ -86,7 +86,7 @@ function $(selector){
             return callback(await fetch(endpoint));
         },
 
-        post: async fucntion(edndpoint, options, callback){
+        post: async fucntion(endpoint, options, callback){
             return callback(await fetch(endpoint,options));
         },
     }
