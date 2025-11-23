@@ -80,15 +80,7 @@ function $(selector){
                 return this;
             }
             return this.element.offsetHeight;
-        },
-
-        get: async function(endpoint, callback){
-            return callback(await fetch(endpoint));
-        },
-
-        post: async fucntion(endpoint, options, callback){
-            return callback(await fetch(endpoint,options));
-        },
+        }
     }
 }
 
