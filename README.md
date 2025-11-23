@@ -1,6 +1,6 @@
 # Jquery Clone
 
-A lightweight reimplementation of jQuery.
+A lightweight reimplementation of jQuery featuring a $() selector engine, DOM helpers, event handling, and built-in request utilities using native browser features.
 
 ## Getting Started
 
