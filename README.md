@@ -1,6 +1,6 @@
-# gQuery
+# Jquery Clone
 
-This lightweight JavaScript utility library offers insight into the underlying implementation of jQuery, providing a closer look at how it works under the hood.
+A lightweight reimplementation of jQuery.
 
 ## Getting Started
 
