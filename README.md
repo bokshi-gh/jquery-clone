@@ -8,7 +8,7 @@ A lightweight reimplementation of jQuery featuring a $() selector engine, DOM he
 
 To use this, simply import the library into your TypeScript file.
 
-```js
+```ts
 import $ from 'https://raw.githubusercontent.com/bokshi-gh/jquery-clone/main/src/script.ts';
 ```
 
