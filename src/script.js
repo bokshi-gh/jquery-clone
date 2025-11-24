@@ -1,87 +1,101 @@
-function $(selector){
-    return {
-        element: document.querySelector(selector),
-        
-        html: function(content){
-            if(content){
-                this.element.innerHTML = content;
-                return this;
-            }else{
-                return this.element.innerHTML;
-            }
-        },
+function $(selector) {
+  const element = document.querySelector(selector);
 
-        on: function(event, callback){
-            this.element.addEventListener(event, callback);
-            return this;
-        },
+  if (!element) return null;
 
-        hide: function(){
-            this.element.style.display = 'none';
-            return this;
-        },
+  return {
+    element,
 
-        show: function(){
-            this.element.style.display = 'block';
-            return this;
-        },
+    html: function (content) {
+      if (content) {
+        this.element.innerHTML = content;
+        return this;
+      } else {
+        return this.element.innerHTML;
+      }
+    },
 
-        attr: function(attributeName, value){
-            if(value){
-                this.element.setAttribute(attributeName, value);
-                return this;
-            }else{
-                return this.element.getAttribute(attributeName);
-            }
-        },
+    on: function (event, callback) {
+      this.element.addEventListener(event, callback);
+      return this;
+    },
 
-        addClass: function(className){
-            this.element.classList.add(className);
-            return this;
-        },
+    hide: function () {
+      this.element.style.display = 'none';
+      return this;
+    },
 
-        removeClass: function(className){
-            this.element.classList.remove(className);
-            return this;
-        },
+    show: function () {
+      this.element.style.display = 'block';
+      return this;
+    },
 
-        toggleClass: function(className){
-            this.element.classList.toggle(className);
-            return this;
-        },
+    attr: function (attributeName, value) {
+      if (value) {
+        this.element.setAttribute(attributeName, value);
+        return this;
+      } else {
+        return this.element.getAttribute(attributeName);
+      }
+    },
 
-        css: function(property, value){
-            if(value){
-                this.element.style[property] = value;
-                return this;
-            }
-            return this.element.style[property];
-        },
+    addClass: function (className) {
+      this.element.classList.add(className);
+      return this;
+    },
 
-        getWidth: function(){
-            return this.element.offsetWidth;
-        },
+    removeClass: function (className) {
+      this.element.classList.remove(className);
+      return this;
+    },
 
-        getHeight: function(){
-            return this.element.offsetHeight;
-        },
+    toggleClass: function (className) {
+      this.element.classList.toggle(className);
+      return this;
+    },
 
-        width: function(value){
-            if(value){
-                this.element.style.width = value + 'px';
-                return this;
-            }
-            return this.element.offsetWidth;
-        },
+    css: function (property, value) {
+      if (value) {
+        this.element.style[property] = value;
+        return this;
+      }
+      return this.element.style[property];
+    },
 
-        height: function(value){
-            if(value){
-                this.element.style.height = value + 'px';
-                return this;
-            }
-            return this.element.offsetHeight;
-        }
+    getWidth: function () {
+      return this.element.offsetWidth;
+    },
+
+    getHeight: function () {
+      return this.element.offsetHeight;
+    },
+
+    width: function (value) {
+      if (value) {
+        this.element.style.width = value + 'px';
+        return this;
+      }
+      return this.element.offsetWidth;
+    },
+
+    height: function (value) {
+      if (value) {
+        this.element.style.height = value + 'px';
+        return this;
+      }
+      return this.element.offsetHeight;
     }
+  }
+}
+
+$.get = async (url, options = {}, callback) => {
+  let response = await fetch(url, { ...options, method: 'GET' });
+  callback(response);
+}
+
+$.post = async (url, options = {}, callback) => {
+  let response = await fetch(url, { ...options, method: 'POST' });
+  callback(response);
 }
 
 export default $;
