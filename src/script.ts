@@ -1,4 +1,4 @@
-function $(selector) {
+function $(selector): {} {
   const element = document.querySelector(selector);
 
   if (!element) return null;
