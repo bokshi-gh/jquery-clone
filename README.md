@@ -6,16 +6,16 @@ A lightweight reimplementation of jQuery featuring a $() selector engine, DOM he
 
 ### Installation
 
-To use this, simply import the library into your TypeScript file.
+To use this, simply import the library into your JavaScript file.
 
 ```ts
-import $ from 'https://raw.githubusercontent.com/bokshi-gh/jquery-clone/main/src/script.ts';
+import $ from 'https://cdn.jsdelivr.net/gh/bokshi-gh/jquery-clone/src/main.js';
 ```
 
 ### Example Usage
 
 ```ts
-import $ from 'https://raw.githubusercontent.com/bokshi-gh/jquery-clone/main/src/script.ts';
+import $ from 'https://cdn.jsdelivr.net/gh/bokshi-gh/jquery-clone/src/main.js';
 
 // Select an element and attach an event listener
 $('#my-div').on('click', function() {
